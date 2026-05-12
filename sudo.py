@@ -1,4 +1,9 @@
-from fastapi import FastAPI
+import fastapi
+from fastapi import FastAPI, APIRouter, Depends
+from fastapi.responses import RedirectResponse
+from fastapi import status
+
+from pydantic import EmailStr
 # import base64
 import os
 from google import genai
@@ -10,9 +15,13 @@ dotenv.load_dotenv()
 
 app = FastAPI()
 
-@app.get("/")
-def root_controller():
-    return {"status": "u are @ fastgen root page"}
+# @app.get("/")
+# def root():
+#     return {"status": "u are @ fastgen root page"}
+
+@app.get('/', include_in_schema=False)
+def redir():
+    return RedirectResponse(url='/docs', status_code=status.HTTP_303_SEE_OTHER)
 
 @app.get("/chat")
 def generate(prompt: str = "How are you?"):
