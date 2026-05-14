@@ -1,3 +1,5 @@
+# task - welcome mail, stats, think more
+
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -13,13 +15,6 @@ load_dotenv()
 app = FastAPI()
 
 def send_email(email, pdf_filepath):
-    """
-    Sends an email with a PDF attachment.
-
-    Args:
-        email (str): The recipient's email address.
-        pdf_filepath (str): The path to the PDF file to attach.
-    """
     from_email: str = os.environ.get("EMAIL_USER")
     from_password: str = os.environ.get("EMAIL_PASS")
 
@@ -53,9 +48,6 @@ def send_email(email, pdf_filepath):
 
 @app.post('/send_mail')
 def send_mail_route():
-    """
-    Handles the /send_mail endpoint.
-    """
     data = requests.Request() # ...
     email = data.get('email')
     pdf_filepath = data.get('pdfFilePath')
@@ -69,7 +61,7 @@ def send_mail_route():
         return {"error": "Failed to send email"}, 500
 
 if __name__ == '__main__':
-    uvicorn.run(app, port=3000)
+    uvicorn.run(app, port=8000)
 
 
 def main():
