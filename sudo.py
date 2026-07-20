@@ -4,10 +4,8 @@ from fastapi.responses import RedirectResponse
 from fastapi import status
 
 from pydantic import EmailStr
-# import base64
 import os
 from google import genai
-# from google.genai import types
 from google.genai.types import Content, Part, GenerateContentConfig, ThinkingConfig
 
 import dotenv

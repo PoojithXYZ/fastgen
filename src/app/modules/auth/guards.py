@@ -1,3 +1,0 @@
-
-
-# e.g. RoleChecker(["admin"]) ???

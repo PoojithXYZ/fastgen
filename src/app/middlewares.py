@@ -1,3 +1,0 @@
-#CORS
-#Logging
-#Observability ???

@@ -1,0 +1,5 @@
+Request ID,Datetime,Endpoint Triggered,Client IP Address,Response Time,Status Code,Successful
+0b3df256229c46f49ed88c40ffceffb5,2026-07-19T10:05:41.108408+00:00,http://127.0.0.1:8000/docs,127.0.0.1,0.0004,200,True
+4828656f478e46f9b8885f87654633e5,2026-07-19T10:05:41.236729+00:00,http://127.0.0.1:8000/openapi.json,127.0.0.1,0.0105,200,True
+8af3f0b1247948ee9bd9d7b26c33c125,2026-07-19T10:06:04.750801+00:00,http://127.0.0.1:8000/generate/text?prompt=how%20are%20you,127.0.0.1,25.0348,200,True
+623ac68a65d249b4b4692effe2438da2,2026-07-19T10:07:28.258016+00:00,http://127.0.0.1:8000/generate/image?prompt=image%20of%20an%20eagle,127.0.0.1,44.6278,200,True
